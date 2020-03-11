@@ -12,3 +12,4 @@ files/*_SHA256SUMS
 tests/test_results.json
 *.pyc
 molecule/*/cache/
+venv
