@@ -1,11 +1,20 @@
 ---
 scenario:
-  name: centos-6
+  name: amazonlinux
 platforms:
-  - name: centos-6
+  - name: amazonlinux
     groups:
       - consul_instances
-    image: dokken/amazonlinux1
+    image: dokken/amazonlinux
     dockerfile: ../_shared/Dockerfile.j2
     capabilities:
       - SYS_ADMIN
+  - name: amazonlinux-2
+    groups:
+      - consul_instances
+    image: dokken/amazonlinux-2
+    dockerfile: ../_shared/Dockerfile.j2
+    capabilities:
+      - SYS_ADMIN
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
