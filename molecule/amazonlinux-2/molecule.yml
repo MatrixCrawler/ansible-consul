@@ -1,0 +1,13 @@
+---
+scenario:
+  name: centos-6
+platforms:
+  - name: centos-6
+    groups:
+      - consul_instances
+    image: dokken/amazonlinux1
+    dockerfile: ../_shared/Dockerfile.j2
+    capabilities:
+      - SYS_ADMIN
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
