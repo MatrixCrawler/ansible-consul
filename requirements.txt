@@ -5,3 +5,6 @@ netaddr
 testinfra
 flake8
 yamllint
+cryptography>=2.5.0
+click>=7.0.0
+testinfra===3.4.0
