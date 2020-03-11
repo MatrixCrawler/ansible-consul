@@ -1,11 +1,13 @@
 ---
 scenario:
-  name: amazonlinux
+  name: amazonlinux-2
 platforms:
-  - name: amazonlinux
+  - name: amazonlinux-2
     groups:
       - consul_instances
-    image: dokken/amazonlinux
+    image: dokken/amazonlinux-2
     dockerfile: ../_shared/Dockerfile.j2
     capabilities:
       - SYS_ADMIN
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro

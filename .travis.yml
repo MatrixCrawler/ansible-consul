@@ -10,6 +10,7 @@ services: docker
 
 env:
   - SCENARIO=amazonlinux
+  - SCENARIO=amazonlinux-2
   - SCENARIO=centos-6
   - SCENARIO=centos-7
   - SCENARIO=centos-8
