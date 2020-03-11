@@ -37,8 +37,7 @@ provisioner:
     name: ansible-lint
 verifier:
   name: testinfra
-  directory: ../_shared/tests
   additional_files_or_dirs:
-    - test_*
+    - ../_shared/tests
   lint:
     name: flake8
