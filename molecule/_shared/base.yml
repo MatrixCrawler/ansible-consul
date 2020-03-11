@@ -38,6 +38,6 @@ provisioner:
 verifier:
   name: testinfra
   additional_files_or_dirs:
-    - ../_shared/tests
+    - ../_shared/tests/*
   lint:
     name: flake8

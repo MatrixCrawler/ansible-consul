@@ -7,12 +7,15 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 
 def test_init_script_reload(host):
-    host.run_expect(0, "/etc/init.d/consul reload")
+    cmd = host.run("/etc/init.d/consul reload")
+    assert cmd.succeeded
 
 
 def test_init_script_stop(host):
-    host.run_expect(0, "/etc/init.d/consul stop")
+    cmd = host.run("/etc/init.d/consul stop")
+    assert cmd.succeeded
 
 
 def test_init_script_start(host):
-    host.run_expect(0, "/etc/init.d/consul start")
+    cmd = host.run("/etc/init.d/consul start")
+    assert cmd.succeeded
